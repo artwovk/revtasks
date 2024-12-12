@@ -71,6 +71,8 @@ func postTask(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	// dobavlena proverka
+
 	for _, k := range tasks {
 		if k.ID == task.ID {
 			http.Error(w, "Task allready created", http.StatusConflict)
